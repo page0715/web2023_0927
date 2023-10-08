@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-image: url('./images/01.jpg');
+            background-size: 100px 100px; */
+        }
+        .box {
+            /* 高度寬度 要先設定 */
+            background-image: url("https://picsum.photos/id/21/600/400");
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            
+            width: 1200px;
+            height: 800px;
+            background-color: red;
+        }
+
+        .clickDiv{
+            background-image: url('./images/01.jpg');
+            background-size: 100px 100px;
+            width: 100px;
+            height: 100px;
+            /* background-color: green; */
+        }
+        .aImg{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>img</h3>
+        <img src="https://picsum.photos/id/20/600/400" alt="">
+    </div>
+
+    <div class="container">
+        <h3>background-image</h3>
+        <div class="box">
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>link bg-image</h3>
+        <a href="">
+            <div class="clickDiv">
+
+            </div>
+        </a>
+    </div>
+
+    <div class="container">
+        <h3>link img</h3>
+        <a href="">
+            <img src="./images/01.jpg" alt="" class="aImg">
+        </a>
+    </div>
+</body>
+
+</html>
