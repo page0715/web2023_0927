@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* 去除空白 */
+            margin: 0;
+            /* border不會超出 */
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightblue;
+            margin: auto;
+        }
+
+        .nav {
+            width: 100%;
+            height: 8vh;
+            background-color: #ccc;
+            text-align: center;
+
+        }
+
+        img {
+            border: 20px solid black;
+            border-radius: 50px 20px;
+        }
+
+        /* a  */
+
+
+        a {
+            /* 調整高度 */
+            display: inline-block;
+            font-size: 28px;
+            /* 跟上面的距離 */
+            margin-top: 20px;
+            /* 跟左邊的距離 */
+            margin-left: 30px;
+            /* 去除a tag 下底線 */
+            text-decoration: none;
+            color: black;
+            /* background-color: lightskyblue; */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- navigation -->
+    <div class="nav">
+        <a href="#item1">圖片區</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#item2">youtube影片區</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#item3">Google Map</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <hr>
+    <div id="item1"></div>
+    <div class="navbg-color">
+        <table>
+            <tr>
+                <td>
+                    <div class="items">
+                        <img src="./images/s01.jpg" alt="">
+                    </div>
+                </td>
+                <td>
+                    <div class="items">
+                        <img src="./images/S02.JPG" alt="">
+                    </div>
+                </td>
+                <td>
+                    <div class="items">
+                        <img src="./images/S03.png" alt="">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <br><br><br>
+    <hr>
+    <div id="item2"></div>
+    <div class="container img">
+        <h1>Youtube 影片區</h1>
+        <div class="youtube" id="2">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/83M-ETlhhEU?si=mlFzPetGxrS2T9tu"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/axvPZImHXDQ?si=v2tkEM-_1M4gPG2x"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JUkUuTO1ryg?si=Ng6SjomgVCacrTIb"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <br><br><br>
+    <hr>
+    <div id="item3"></div>
+    <div class="container box3">
+        <div class="box">
+            <table>
+                <tr>
+                    <td>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7021518518104!2d121.41948359999998!3d25.044180100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bed3dc9b59%3A0x57e6439a2db0fa2a!2zMjQz5paw5YyX5biC5rOw5bGx5Y2A6LK05a2Q6YeM6Ie06YGg5paw5p2RNTXkuYsx6Jmf5rOw5bGx6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1697005554775!5m2!1szh-TW!2stw"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </td>
+                    <td>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore architecto, at mollitia quia
+                        a nobis, amet veritatis iste facilis distinctio rerum numquam deleniti adipisci nemo. In
+                        laboriosam fuga obcaecati iure? Quibusdam tempore nostrum saepe magni minima asperiores
+                        natus, quidem voluptas officiis, voluptatibus maxime odio praesentium ad reprehenderit!
+                        Quas, quibusdam. Temporibus?
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <a href="#" id="top">top</a>
+</body>
+
+</html>

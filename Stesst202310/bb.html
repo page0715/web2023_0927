@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .container{
+            width: 100vh;
+            margin: auto;
+        }
+
+        .bar {
+            height: 15vh;
+            background: gray;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 3vh;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .items {
+            text-align: center;
+        }
+
+        .youtube {
+            display: flex;
+            justify-content: space-between;
+        }
+        .map{
+            display: flex;
+            justify-content: space-between;
+            height: 95vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="bar">
+            <p><a href="#1">寶可夢資料</a></p>
+            <p><a href="#2">影片資訊</a></p>
+            <p><a href="#3">出沒地點</a></p>
+        </div>
+        <div class="content" id="1">
+            <div class="items">
+                <img src="./1.png" alt="">
+                <p>耿鬼</p>
+            </div>
+            <div class="items">
+                <img src="./2.png" alt="">
+                <p>風速狗</p>
+            </div>
+            <div class="items">
+                <img src="./3.png" alt="">
+                <p>沙奈朵</p>
+            </div>
+        </div>
+        <div class="youtube" id="2">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2qOUu5f2Zoc?si=yzIq3nt-OKYzuXNk"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/j1zU7jwIkl8?si=t-03UJ_eNYPXTwwn"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BNB2Qn8RbAA?si=4x72tuQx_vBqQ69H"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div class="map" id="3">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57777.015497796936!2d121.51569288793175!3d25.167334695761962!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b213f0d75b45%3A0x443012970a340e48!2z5aSn5bGv54Gr5bGx576k!5e0!3m2!1szh-TW!2stw!4v1696995967949!5m2!1szh-TW!2stw"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.8085983440574!2d121.55627086758614!3d25.07447564322724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac735c088297%3A0x265ecc0587aacfa5!2z576O5aCk5rKz5r-x5YWs5ZyS6LaK6YeO6LO96LuK5aC0!5e0!3m2!1szh-TW!2stw!4v1696996024022!5m2!1szh-TW!2stw"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1807.5327497885546!2d121.50707747787233!3d25.031851144442996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f3712507b%3A0x890e4a55e21e821!2z6Ie65YyX5qSN54mp5ZyS!5e0!3m2!1szh-TW!2stw!4v1696996068272!5m2!1szh-TW!2stw"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div class="container2"></div>
+</body>
+
+</html>
