@@ -11,13 +11,6 @@
             margin: auto;
             margin-top: 30px
         }
-        .nav {
-            width: 100%;
-            height: 8vh;
-            background-color: #ccc;
-            text-align: center;
-
-        }
 
         table,
         tr,
@@ -68,61 +61,63 @@
         h3 {
             text-align: center;
         }
+        .bg-gray{
+            background-color: lightgray;
+        }
     </style>
 </head>
 
 <body>
     <div class="nav">
-        <a href="../index-t-s.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="../student/index2.html">學生</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="../teacher/index.html">老師</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../index.html">home</a>
+        <a href="../student/index.html">students</a>
+        <a href="../teacher/index.html">teachers</a>
     </div>
 
     <div class="container text-right">
-        <h3>Teacher list</h3>
+        <h3>teachers list</h3>
         <a href="./create.html">Add&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
         <table>
-            <tr class="bg-red">
+            <tr class="bg-pink">
                 <th>id</th>
                 <th>name</th>
+                <th>mail</th>
                 <th>mobile</th>
                 <th>pic</th>
                 <th>oprate</th>
             </tr>
             <tr>
                 <td>1</td>
-                <td><a href="./edit.html?id=1">	tsai kun yen fire2x</a></td>
+                <td><a href="./edit.html?id=1">amy</a></td>
+                <td>t1@abc.com</td>
                 <td>0911-111-111</td>
                 <td>
                     <img src="https://picsum.photos/id/20/100/100" alt="" srcset="">
                     <br>
-                    tsai kun yen fire2x.jpg
+                    amy.jpg
                 </td>
                 <td class="text-green">
                     <a href="./edit.html?id=1">edit</a>
                     <a href="./del.html?id=1">Del</a>
                 </td>
             </tr>
-            <tr class="bg-pink">
+            <tr class="bg-gray">
                 <td>2</td>
-                <td><a href="./edit.html?id=2">mackliu</a></td>
+                <td><a href="./edit.html?id=1">bob</a></td>
+                <td>t2@abc.com</td>
                 <td>0922-222-222</td>
-                <td>mackliu.jpg</td>
+                <td>
+                    <img src="https://picsum.photos/id/20/100/100" alt="" srcset="">
+                    <br>
+                    bob.jpg
+                </td>
                 <td class="text-green">
-                    <a href="./edit.html?id=2">edit</a>
-                    <a href="./del.html?id=2">Del</a>
+                    <a href="./edit.html?id=1">edit</a>
+                    <a href="./del.html?id=1">Del</a>
                 </td>
             </tr>
-            <tr>
-                <td>3</td>
-                <td><a href="./edit.html?id=3">chengkk0910</a></td>
-                <td>0933-333-333</td>
-                <td>chengkk0910.jpg</td>
-                <td class="text-green">
-                    <a href="./edit.html?id=3">edit</a>
-                    <a href="./del.html?id=3">Del</a>
-                </td>
-            </tr>
+           
+            
             
         </table>
     </div>
