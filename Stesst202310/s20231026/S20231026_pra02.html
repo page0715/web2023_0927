@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>萬聖節特賣會</title>
     <style>
         * {
             box-sizing: border-box;
-            /* 問一下同學 */
             margin: 0;
 
         }
@@ -52,7 +51,11 @@
             text-align: center;
             /* background-color: aquamarine; */
         }
-
+        ul>b:hover{
+            filter: grayscale(20);
+        transition-duration: 2s;
+            background-color:blue;
+        }
         li {
 
 
@@ -63,6 +66,7 @@
             text-decoration: none;
         }
 
+        a:hover{ background-color:blue;}
         a {
             display: flex;
             justify-content: center;
@@ -86,6 +90,7 @@
         }
 
         .item {
+            margin-top: 150px;
             width: 20%;
             border: 2px solid red;
             text-align: center;
@@ -93,10 +98,27 @@
             border-radius: 20px;
             background-color: lightpink;
         }
-
+        .item:hover {
+        filter: grayscale(20);
+        transition-duration: 2s;
+      }
         .bg-blue {
             background-color: lightskyblue;
         }
+        .item2 {
+            /* margin-top: 50px; */
+            width: 20%;
+            border: 3px solid blueviolet;
+            text-align: center;
+            margin: 10px 10px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color:  lightgoldenrodyellow;
+        }
+        .item2:hover {
+        filter: grayscale(20);
+        transition-duration: 2s;
+      }
     </style>
 </head>
 
@@ -108,91 +130,125 @@
     <nav class="nav">
         <ul>
             <li>
-                <a href="#container1" style='font-size: 30px;color: red;'>特價商品</a>
+                <a href="#container1" style='font-size: 30px;color: red;'>限時特價</a>
             </li>
             <b style='font-size: 72px;color: red;'>萬聖節特賣會</b>
             <li>
-                <a href="#container2" style='font-size: 30px;color: red;'>三C產品</a>
+                <a href="#container2" style='font-size: 30px;color: red;'>特價商品</a>
             </li>
         </ul>
     </nav>
     <div id="container1"></div>
     <div class="container">
         <div class="item">
-            <img src="https://picsum.photos/id/20/200/160" alt="" srcset="">
-            <br>
+            <img src="./img/S01.jpg" alt="" srcset="">
+            <!-- <br>
             <h3>Lorem ipsum dolor sit amet.</h3>
             <br>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores sapiente perferendis possimus
                 distinctio, omnis placeat.
-            </p>
+            </p> -->
         </div>
         <div class="item">
-            <img src="https://picsum.photos/id/20/200/160" alt="" srcset="">
-            <br>
+            <img src="./img/S02.jpg" alt="" srcset="">
+            <!-- <br>
             <h3>Lorem ipsum dolor sit amet.</h3>
             <br>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores sapiente perferendis possimus
                 distinctio, omnis placeat.
-            </p>
+            </p> -->
         </div>
         <div class="item">
-            <img src="https://picsum.photos/id/20/200/160" alt="" srcset="">
-            <br>
+            <img src="./img/S03.jpg" alt="" srcset="">
+            <!-- <br>
             <h3>Lorem ipsum dolor sit amet.</h3>
             <br>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores sapiente perferendis possimus
                 distinctio, omnis placeat.
-            </p>
+            </p> -->
         </div>
     </div>
     <!-- container 2 -->
     <div id="container2"></div>
     <div class="container bg-blue">
-        <div class="item">
-            <img src="https://picsum.photos/id/20/200/160" alt="" srcset="">
+        <div class="item2">
+            <img src="./img/e01.jpg" alt="" srcset="">
             <br>
-            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h3>Ryzen Z1 Extreme</h3>
             <br>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores sapiente perferendis possimus
-                distinctio, omnis placeat.
+                AMD Navi3/512G/8G*2/W11/120Hz
             </p>
         </div>
-        <div class="item">
-            <img src="https://picsum.photos/id/20/200/160" alt="" srcset="">
+        <div class="item2">
+            <img src="./img/e02.jpg" alt="" srcset="">
             <br>
-            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h3>ViewSonic VX3211-4K-mhd HDR專業螢幕</h3>
             <br>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores sapiente perferendis possimus
-                distinctio, omnis placeat.
+                32型/4K/HDMI/喇叭/VA
             </p>
         </div>
-        <div class="item">
-            <img src="https://picsum.photos/id/20/200/160" alt="" srcset="">
+        <div class="item2">
+            <img src="./img//e03.jpg" alt="" srcset="">
             <br>
-            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h3>Surface Laptop Go2 8QF-00043</h3>
             <br>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores sapiente perferendis possimus
-                distinctio, omnis placeat.
+                i5-1135G7 ∥ 8G ∥ 256G SSD ∥ Win11
             </p>
         </div>
-        <div class="item">
-            <img src="https://picsum.photos/id/20/200/160" alt="" srcset="">
+        <div class="item2">
+            <img src="./img/e04.jpg" alt="" srcset="">
             <br>
-            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h3>HP ENVY x360 13-bf0047TU 宇宙藍</h3>
             <br>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores sapiente perferendis possimus
-                distinctio, omnis placeat.
+                i7-1250U ∥ 翻轉觸控 ∥ 1T PCIe SSD ∥ 背光鍵盤
+            </p>
+        </div>
+        <br>
+        <div class="item2">
+            <img src="./img/e05.jpg" alt="" srcset="">
+            <br>
+            <h3>Lenovo IdeaCentre Gaming5</h3>
+            <br>
+            <p>
+                i51TB SSD獨顯Win11電競機
+            </p>
+        </div>
+        <div class="item2">
+            <img src="./img/e06.jpg" alt="" srcset="">
+            <br>
+            <h3>ROG G15CF i5 雙碟 RTX3050顯卡電競機</h3>
+            <br>
+            <p>
+                3螢幕輸出介面 : HDMI．DP
+               </p>
+        </div>
+        <div class="item2">
+            <img src="./img//e07.jpg" alt="" srcset="">
+            <br>
+            <h3>GIGABYTE 技嘉 GS32QC 曲面電競螢幕</h3>
+            <br>
+            <p>
+                32型/2K/165hz/1ms/VA
+            </p>
+        </div>
+        <div class="item2">
+            <img src="./img/e08.jpg" alt="" srcset="">
+            <br>
+            <h3>HP Pavilion Plus Laptop 14-eh1028TU 星曜銀</h3>
+            <br>
+            <p>
+                i7-13700H ∥ 16G ∥1TB SSD ∥ OLED 2.8K
             </p>
         </div>
     </div>
+    
     <!-- container 2 -->
 
 </body>
