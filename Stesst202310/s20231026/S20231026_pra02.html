@@ -10,24 +10,30 @@
             box-sizing: border-box;
             /* 問一下同學 */
             margin: 0;
-        }
-        .header{
-            width: 100%;
-            height: 15vh;
-            /* 查一下英文 */
-            background-color: pink;          
-        }
-        /* 影片大約在 9 分左右, 要做一個 header 開始 */
-        .nav{
-            position: sticky;
-            top: 15px;
 
+        }
+
+        body {
+            background-color: black;
+        }
+
+
+        /* .header {
             width: 100%;
             height: 15vh;
-            /* 查一下英文 */
+            background-color: pink;
+        } */
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 15vh;
+
             background-color: bisque;
 
         }
+
         /* ul>li{
             display: inline-block;
         }
@@ -38,28 +44,35 @@
             background-color: red;
         } */
 
-        ul{
+        ul {
             display: flex;
             justify-content: space-around;
             align-items: center;
             list-style-type: none;
-            background-color: aquamarine;
+            text-align: center;
+            /* background-color: aquamarine; */
         }
-        li{
 
-            
+        li {
+
+
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin-top:10px;
+            margin-top: 10px;
             text-decoration: none;
         }
-        a{
-            width: 100px;
+
+        a {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 150px;
             height: 100px;
-            background-color: red;
+            align-items: center;
+            /* background-color: red; */
         }
-  
+
 
 
         .container {
@@ -74,33 +87,36 @@
 
         .item {
             width: 20%;
-            border: 1px solid black;
+            border: 2px solid red;
             text-align: center;
             padding: 10px;
+            border-radius: 20px;
+            background-color: lightpink;
         }
 
-        .bg-blue{
+        .bg-blue {
             background-color: lightskyblue;
         }
     </style>
 </head>
 
 <body>
-    <header class="header">
+    <!-- <header class="header">
         Store
-    </header>
+    </header> -->
 
     <nav class="nav">
         <ul>
             <li>
-                <a href="http://">linkA</a>
+                <a href="#container1" style='font-size: 30px;color: red;'>特價商品</a>
             </li>
+            <b style='font-size: 72px;color: red;'>萬聖節特賣會</b>
             <li>
-                <a href="http://">linkB</a>
+                <a href="#container2" style='font-size: 30px;color: red;'>三C產品</a>
             </li>
         </ul>
     </nav>
-
+    <div id="container1"></div>
     <div class="container">
         <div class="item">
             <img src="https://picsum.photos/id/20/200/160" alt="" srcset="">
@@ -134,6 +150,7 @@
         </div>
     </div>
     <!-- container 2 -->
+    <div id="container2"></div>
     <div class="container bg-blue">
         <div class="item">
             <img src="https://picsum.photos/id/20/200/160" alt="" srcset="">
