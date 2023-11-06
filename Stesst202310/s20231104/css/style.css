@@ -1,3 +1,28 @@
-h1{
-    color: red;
+*{
+    margin:0;
+    box-sizing: border-box;
 }
+
+body{
+    width: 1024px;
+    height: 768px;
+    background-color: lightblue;
+}
+
+.header{
+    width: 1000px;
+    height: 65px;
+    background-color: lightpink;
+    margin: auto;
+}
+.container{
+    margin: auto;
+}
+
+.aside{
+    width: 215px;
+    height: calc(768px - 65px - 20px );
+    background-color: red;
+}
+
+
