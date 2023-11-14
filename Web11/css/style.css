@@ -29,7 +29,7 @@ body{
 .aside{
     width: 215px;
     height: calc(768px - 65px - 20px);
-    background-color: red;
+    /* background-color: red; */
     margin: auto;
     border: 1px solid black;
     border-right: 0;
@@ -45,7 +45,12 @@ body{
 .aside-footer{
     width: 215px;
     height:  25px;
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    font-family: '標楷體';
+    font-size: 16px;
+    color: #000000;
+
+
 }
 
 
@@ -54,7 +59,7 @@ body{
 .main{
     width: calc(1024px - 215px);
     height: calc(768px - 65px - 20px);
-    background-color: green;
+    /* background-color: green; */
     margin: auto;
     border: 1px solid black;
     display: flex;
@@ -65,7 +70,7 @@ body{
 .main-header{
     width: calc(1024px - 215px);
     height: 29px;
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
     font-family: '標楷體';
     font-size: 24px;
     color: #0000FF;
