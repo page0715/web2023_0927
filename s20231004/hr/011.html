@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(2, 153, 153);
+
+        }
+        .text-red {
+            color: red;
+        }
+        .contaniner{
+
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>hr報表 2023-10-03 </legend>
+            <p>姓名
+                <input type="text" value="請輸入姓名" name="myText">
+            </p>
+            <p>電話
+                <input type="number" name="myNumber" value="0912345678" title="aaa">
+            </p>
+            <p>地址<input type="text" value="請輸入地址" name="myText2" size="50"></p>
+            <p>參與政黨
+                <select name="mySelect" id="">
+                    <option value="">請選擇</option>
+                    <option value="s1">國民黨</option>
+                    <option value="s2">民進黨</option>
+                    <option value="s3">民眾黨</option>
+                    <option value="s4">親民黨</option>
+                    <option value="s5">無黨籍</option>
+                </select>
+            </p>
+            <p>姓別
+                <input type="radio" name="myRadio" id="item1">
+                <label for="Male">男</label>
+                <input type="radio" name="myRadio" id="item2">
+                <label for="Female">女</label>
+                <input type="radio" name="myRadio" id="item3">
+                <label for="NoSay">不方便透露</label>
+            </p>
+            <p>程式
+                <!-- [] 代表 陣列array 多選 -->
+                <input type="checkbox" name="myCheckbox[]" id="check1">
+                <label for="check1">html</label>
+                <input type="checkbox" name="myCheckbox[]" id="check2">
+                <label for="check2">css</label>
+                <input type="checkbox" name="myCheckbox[]" id="check3">
+                <label for="check3">php</label>
+            </p>
+            <p>備註
+                <textarea name="myTextarea" id="" cols="80" rows="10" >
+請輸入備註
+            </textarea>
+            </p> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="清除資料">
+            &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="送出資料">
+
+        </fieldset>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
