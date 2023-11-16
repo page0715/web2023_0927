@@ -4,132 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
+    <title>人事系統</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body{
-            background-color: rgb(2, 153, 153);
+            background-image: url(https://picsum.photos/id/9/1900/1000?grayscale);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Courier New', '標楷體';
+            /* color: lightskyblue; */
+            font-size: 18px;
+        }
+        .container{
+            background-color: wheat;
 
         }
-        .text-red {
-            color: red;
-        }
-        .contaniner{
-
-
-        }
-
     </style>
 </head>
 
 <body>
-    <h1>人事表單 HR FORM</h1>
-    <div class="container">
-        <fieldset>
-            <legend>hr報表 2023-10-03 </legend>
-            <form action="/action_page.php">
-                  <div class="row">
-                    <div class="col-12 col-sm-6">
-                        <div class="mb-3 mt-3">
-                            <label for="text">姓名:</label>
-                            <input type="text" class="form-control" id="text" placeholder="請輸入姓名" name="name">
+    <div class="container mt-3">
+        <h2>HR Form 人事表單</h2>
+        <form action="/HR_page.php" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="mb-3 mt-3">
+                        <label for="text"><i class="fa-regular fa-calendar-days"></i>到職日期:</label>
+                        <input type="Date" class="form-control" id="text" name="date">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="mb-3 mt-3">
+                        <label for="text"><i class="fa-solid fa-lock"></i>系統密碼:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="mb-3 mt-3">
+                        <label for="text"><i class="fa-solid fa-user"></i>姓名 Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="請輸入姓名" name="name">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="mb-3 mt-3">
+                        <label for="text"><i class="fa-solid fa-mobile-screen"></i>行動電話 Mobile:</label>
+                        <input type="text" class="form-control" id="mobile" placeholder="請輸入行動電話" name="mobile">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <div class="mb-3 mt-3">
+                        <label for="text"><i class="fa-solid fa-house"></i>地址:</label>
+                        <input type="text" class="form-control" id="address" placeholder="請輸入居住地地址" name="address">
+                    </div>
+                </div>
+                <!-- <div class="col-12 col-sm-6">
+                    <div class="mb-3 mt-3">
+                        <label for="text">Mobile:</label>
+                        <input type="text" class="form-control" id="mobile" placeholder="請輸入行動電話" name="mobile">
+                    </div>
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3 mt-3">
+                        <label for="text"><i class="fa-solid fa-people-group"></i>參與政黨:</label>
+                        <select class="form-select form-select" name="">
+                            <option value="">請選擇</option>
+                            <option value="s1">國民黨</option>
+                            <option value="s2">民進黨</option>
+                            <option value="s3">民眾黨</option>
+                            <option value="s4">親民黨</option>
+                            <option value="s5">無黨籍</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3 mt-3">
+                        <label for="text"><i class="fa-solid fa-heart"></i>血型:</label>
+                        <select class="form-select form-select" name="">
+                            <option value="">請選擇</option>
+                            <option value="b1">O</option>
+                            <option value="b2">A</option>
+                            <option value="b3">B</option>
+                            <option value="b4">AB</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="text"><i class="fa-solid fa-children"></i>性別:</label>
+                <div class="col">
+                    <div class="mb-3 mt-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">男</label>
                         </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <div class="mb-3 mt-3">
-                            <label for="mobile">行動電話:</label>
-                            <input type="text" class="form-control" id="text" placeholder="Enter Mobile" name="mobile">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">女</label>
                         </div>
-                    </div>
-                </div>  
-                <div class="row">
-                    <div class="col-12 mb-3 mt-3">
-                        <label for="address">地址:</label>
-                        <input type="text" class="form-control" id="text" placeholder="請輸入地址" name="address">
-                    </div>
-                </div>  
-                <div class="row">
-                    <div class="col">
-                        <div class="mb-3 mt-3">
-                            <label for="text">參與政黨:</label>
-                            <select class="form-select form-select">
-                                <option value="">請選擇</option>
-                                <option value="s1">國民黨</option>
-                                <option value="s2">民進黨</option>
-                                <option value="s3">民眾黨</option>
-                                <option value="s4">親民黨</option>
-                                <option value="s5">無黨籍</option>
-                            </select>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                value="option3">
+                            <label class="form-check-label" for="inlineRadio3">不方便透露</label>
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="mb-3 mt-3">
-                            <label for="text">Name:</label>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1"
-                                    checked>
-                                <label class="form-check-label" for="radio1">男</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
-                                <label class="form-check-label" for="radio2">女</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option3">
-                                <label class="form-check-label" for="radio2">不方便透露</label>
-                            </div>
-                            <!-- <div class="form-check">
-                                <input type="radio" class="form-check-input" disabled>
-                                <label class="form-check-label">Option 3</label>
-                            </div> -->
+                
+                <label for="text"><i class="fa-solid fa-globe"></i>具備何種網頁語言:</label>
+                <div class="col">
+                    <div class="mb-3 mt-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">HTML</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">CSS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox3">PHP</label>
                         </div>
                     </div>
+
                 </div>
 
 
 
-                <div class="form-check mb-3">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                  </label>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3 mt-3">
+                        <label for="comment"><i class="fa-regular fa-comment-dots"></i>備註:</label>
+                        <textarea class="form-control" rows="5" id="comment" name="myTextarea"></textarea>
+
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">送出資料</button>
-              </form>
-            
-            <p>姓別
-                <input type="radio" name="myRadio" id="item1">
-                <label for="Male">男</label>
-                <input type="radio" name="myRadio" id="item2">
-                <label for="Female">女</label>
-                <input type="radio" name="myRadio" id="item3">
-                <label for="NoSay">不方便透露</label>
-            </p>
-            <p>程式
-                <!-- [] 代表 陣列array 多選 -->
-                <input type="checkbox" name="myCheckbox[]" id="check1">
-                <label for="check1">html</label>
-                <input type="checkbox" name="myCheckbox[]" id="check2">
-                <label for="check2">css</label>
-                <input type="checkbox" name="myCheckbox[]" id="check3">
-                <label for="check3">php</label>
-            </p>
-            <p>備註
-                <textarea name="myTextarea" id="" cols="80" rows="10" >
-請輸入備註
-            </textarea>
-            </p> 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="清除資料">
-            &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="送出資料">
-
-        </fieldset>
-
-
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="reset" class="btn btn-primary"><i class="fa-solid fa-wrench"></i>清除資料</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-circle-check"></i>送出資料</button>
+        </form>
 
     </div>
 
