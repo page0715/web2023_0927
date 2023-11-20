@@ -143,10 +143,14 @@ iframe{
 .footer{
     width: 1024px;
     height: 20px;
-    background-color: blue;
+    /* background-color: blue; */
     margin: auto;
     border: 1px solid black;
     border-top:0;
+    font-family: '標楷體';
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
 
 }
 
