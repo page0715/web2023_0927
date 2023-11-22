@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .box {
+      width: 100%;
+      height: 80vh;
+    }
+    .navbar-brand > img {
+      padding-bottom:5px ;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- sticky-top fixed-top-->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="javascript:void(0)">Apple</a> -->
+      <a class="navbar-brand" href="#">
+        <!-- <i class="fa-brands fa-apple"></i> -->
+        <img src="./images/Apple_logo_black.svg" alt="Logo" width="30" height="35"
+          class="d-inline-block align-text-top">
+        <!-- Apple -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#page1">page1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#page2">page2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#page3">page3</a>
+          </li>
+        </ul>
+
+        <form class="d-flex justify-content-center">
+          <span class="navbar-text">Hi~Admin&nbsp;&nbsp;:))&nbsp;&nbsp;</span>
+          <!-- <input class="form-control me-2" type="text" placeholder="Search"> -->
+          <button class="btn btn-primary" type="button">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div id="page1">
+  </div>
+  <div class="container bg-dark mb-3 ">
+    <div class="box">
+
+    </div>
+  </div>
+
+  <div id="page2">
+  </div>
+  <div class="container bg-danger mb-3">
+    <div class="box">
+
+    </div>
+  </div>
+  <div id="page3">
+  </div>
+  <div class="container bg-warning mb-3">
+    <div class="box">
+
+    </div>
+  </div>
+</body>
+
+</html>
