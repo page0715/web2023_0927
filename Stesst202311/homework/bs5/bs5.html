@@ -31,11 +31,23 @@
 
         .container-collapse {
             width: 100%;
-            height: 20vh;
+            height: 50vh;
             display: flex;
             margin: auto;
             text-align: center;
             justify-content: center;
+        }
+
+        .container-dropdown {
+
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+
+
         }
     </style>
 </head>
@@ -47,7 +59,7 @@
             <!-- <a class="navbar-brand" href="javascript:void(0)">Apple</a> -->
             <a class="navbar-brand" href="#">
                 <!-- <i class="fa-brands fa-apple"></i> -->
-                <img src="./images/facebook-like-logo-svgrepo-com.svg" alt="Logo" width="30" height="35"
+                <img src="./images/facebook-like-logo-svgrepo-com.svg" alt="Logo" width="35" height="35"
                     class="d-inline-block align-text-top">
                 <!-- Facebook like -->
             </a>
@@ -64,10 +76,10 @@
                         <a class="nav-link" href="#container-card">card</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#page3">collapse</a>
+                        <a class="nav-link" href="#container-collapse">collapse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#page3">dropdown</a>
+                        <a class="nav-link" href="#container-dropdown">dropdown</a>
                     </li>
                 </ul>
 
@@ -140,7 +152,7 @@
             <img class="card-img-top" src="https://picsum.photos/id/18/800/600" alt="Card image" style="width:100%">
             <div class="card-img-overlay">
                 <h4 class="card-title">John Doe</h4>
-                <p class="card-text">Some example text some example text. Some example text some example text. Some
+                <p class="card-text" style="color: white;">Some example text some example text. Some example text some example text. Some
                     example text some example text. Some example text some example text.</p>
                 <a href="#" class="btn btn-primary">See Profile</a>
             </div>
@@ -185,7 +197,7 @@
                 <div class="col-8">
                     <div class="collapse multi-collapseb" id="multiCollapseExample1b">
                         <div class="card card-body">
-                            <i class="fa-solid fa-scale-balanced"></i> 黑色星期五  一年一次  錯過只好等明年.......
+                            <i class="fa-solid fa-scale-balanced"></i> 黑色星期五 一年一次 錯過只好等明年.......
                         </div>
                     </div>
                 </div>
@@ -194,8 +206,8 @@
                         <div class="card card-body">
                             <div class="">
                                 <img src="https://picsum.photos/id/237/400/300" alt=""><br>
-                                <i class="fa-solid fa-dog"></i> 只剩一隻 乖巧可愛 
-                                                          <span style=color:red;>帶走吧!!</span>
+                                <i class="fa-solid fa-dog"></i> 只剩一隻 乖巧可愛
+                                <span style=color:red;>帶走吧!!</span>
                             </div>
                             <!-- Some placeholder content for the second collapse component of this multi-collapse example. This panel is
             hidden by default but revealed when the user activates the relevant trigger. -->
@@ -205,23 +217,46 @@
             </div>
         </div>
     </div>
-<!-- Dropbox -->
+    <!-- Dropdown -->
+    <div class="container-dropdown" id="container-dropdown">
+        <div class="col-4   btn-group ">
+            <button type="button" class="btn btn-secondary dropdown-toggle btn-danger" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                特賣種類
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button"><a href="https://tw.yahoo.com/">限時特賣</a></button></li>
+                <li><button class="dropdown-item" type="button"><a href="https://shopee.tw/">出清特賣</a></button></li>
+                <li><button class="dropdown-item" type="button"><a href="https://www.pchome.com.tw/">限時&出清</a></button>
+                </li>
+            </ul>
 
-<div class="btn-group">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      特賣種類
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end">
-      <li><button class="dropdown-item" type="button"><a href="https://tw.yahoo.com/">限時特賣</a></button></li>
-      <li><button class="dropdown-item" type="button"><a href="https://shopee.tw/">出清特賣</a></button></li>
-      <li><button class="dropdown-item" type="button"><a href="https://www.pchome.com.tw/">限時&出清</a></button></li>
-    </ul>
+        </div>
+        <div class="col-8 btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle " data-bs-toggle="dropdown"
+                aria-expanded="false">
+                一般商品
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button"><a href="https://24h.pchome.com.tw/sign/3c">3C產品</a></button></li>
+                <li><button class="dropdown-item" type="button"><a href="https://24h.pchome.com.tw/sign/cp">週邊商品</a></button></li>
+                <li><button class="dropdown-item" type="button"><a href="https://24h.pchome.com.tw/sign/digi">數位</a></button></li>
+                <li><button class="dropdown-item" type="button"><a href="https://24h.pchome.com.tw/sign/daily">日用</a></button></li>
+                <li><button class="dropdown-item" type="button"><a href="https://24h.pchome.com.tw/sign/life">生活</a></button></li>
+                <li><button class="dropdown-item" type="button"><a href="https://24h.pchome.com.tw/sign/home">居家</a></button></li>
+            </ul>
 
-  </div>
+        </div>
 
-  <div class="my-p">
-    <a href="#">TOP</a>
-</div>
+    </div>
+
+
+    <!--  -->
+
+
+    <div class="my-p">
+        <a href="#">TOP</a>
+    </div>
 
 </body>
 
