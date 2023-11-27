@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>011HomeWork</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .box {
+            width: 100%;
+            height: 80vh;
+        }
+
+        .navbar-brand>img {
+            padding-bottom: 5px;
+        }
+
+        .container-card {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: space-around;
+        }
+
+        .container-collapse {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .container-dropdown {
+
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- sticky-top fixed-top-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="javascript:void(0)">Apple</a> -->
+            <a class="navbar-brand" href="#">
+                <!-- <i class="fa-brands fa-apple"></i> -->
+                <img src="./images/facebook-like-logo-svgrepo-com.svg" alt="Logo" width="35" height="35"
+                    class="d-inline-block align-text-top">
+                <!-- Facebook like -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carouselExampleCaptions">Carousel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#container-card">card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#container-collapse">collapse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#container-dropdown">dropdown</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex justify-content-center">
+                    <span class="navbar-text">Hi~Page0715&nbsp;&nbsp;:))&nbsp;&nbsp;</span>
+                    <!-- <input class="form-control me-2" type="text" placeholder="Search"> -->
+                    <button class="btn btn-primary" type="button">Logout</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators" id="carousel">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/id/9/800/600" class="d-block w-100" width="800px" height="600px"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>第一頁</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/id/10/800/600" class="d-block w-100" width="800px" height="600px"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>第二頁</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/id/12/800/600" class="d-block w-100" width="800px" height="600px"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>第三頁</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Card -->
+    <h2>Card Image Overlay</h2>
+    <p>Turn an image into a card background and use .card-img-overlay to overlay the card's text:</p>
+
+    <div class="container-card mt-3" id="container-card">
+
+        <!-- card 1 -->
+        <div class="card img-fluid" style="width:500px">
+            <img class="card-img-top" src="https://picsum.photos/id/18/800/600" alt="Card image" style="width:100%">
+            <div class="card-img-overlay">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text" style="color: white;">Some example text some example text. Some example text some
+                    example text. Some
+                    example text some example text. Some example text some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card img-fluid" style="width:500px">
+            <img class="card-img-top" src="https://picsum.photos/id/10/800/600" alt="Card image" style="width:100%">
+            <div class="card-img-overlay">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Some example text some example text. Some example text some example text. Some
+                    example text some example text. Some example text some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card img-fluid" style="width:500px">
+            <img class="card-img-top" src="https://picsum.photos/id/14/800/600" alt="Card image" style="width:100%">
+            <div class="card-img-overlay">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Some example text some example text. Some example text some example text. Some
+                    example text some example text. Some example text some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <!-- collapse -->
+
+    <div class="container-collapse" id="container-collapse">
+        <div class="container-fluid">
+            <p class="d-inline-flex gap-1">
+                <a class="btn btn-danger" data-bs-toggle="collapse" href="#multiCollapseExample1b" role="button"
+                    aria-expanded="false" aria-controls="multiCollapseExample1b">限時優惠</a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseExample2b" aria-expanded="false"
+                    aria-controls="multiCollapseExample2b">出清特賣</button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target=".multi-collapseb" aria-expanded="false"
+                    aria-controls="multiCollapseExample1b multiCollapseExample2b">限時&出清</button>
+            </p>
+            <div class="row">
+                <div class="col-8">
+                    <div class="collapse multi-collapseb" id="multiCollapseExample1b">
+                        <div class="card card-body">
+                            <i class="fa-solid fa-scale-balanced"></i> 黑色星期五 一年一次 錯過只好等明年.......
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="collapse multi-collapseb" id="multiCollapseExample2b">
+                        <div class="card card-body">
+                            <div class="">
+                                <img src="https://picsum.photos/id/237/400/300" alt=""><br>
+                                <i class="fa-solid fa-dog"></i> 只剩一隻 乖巧可愛
+                                <span style=color:red;>帶走吧!!</span>
+                            </div>
+                            <!-- Some placeholder content for the second collapse component of this multi-collapse example. This panel is
+            hidden by default but revealed when the user activates the relevant trigger. -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dropdown -->
+    <div class="container-dropdown" id="container-dropdown">
+        <div class="col-4   btn-group ">
+            <button type="button" class="btn btn-secondary dropdown-toggle btn-danger" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                特賣種類
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button"><a href="https://tw.yahoo.com/">限時特賣</a></button></li>
+                <li><button class="dropdown-item" type="button"><a href="https://shopee.tw/">出清特賣</a></button></li>
+                <li><button class="dropdown-item" type="button"><a href="https://www.pchome.com.tw/">限時&出清</a></button>
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-8 btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle " data-bs-toggle="dropdown"
+                aria-expanded="false">
+                一般商品
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button"><a
+                            href="https://24h.pchome.com.tw/sign/3c">3C產品</a></button></li>
+                <li><button class="dropdown-item" type="button"><a
+                            href="https://24h.pchome.com.tw/sign/cp">週邊商品</a></button></li>
+                <li><button class="dropdown-item" type="button"><a
+                            href="https://24h.pchome.com.tw/sign/digi">數位</a></button></li>
+                <li><button class="dropdown-item" type="button"><a
+                            href="https://24h.pchome.com.tw/sign/daily">日用</a></button></li>
+                <li><button class="dropdown-item" type="button"><a
+                            href="https://24h.pchome.com.tw/sign/life">生活</a></button></li>
+                <li><button class="dropdown-item" type="button"><a
+                            href="https://24h.pchome.com.tw/sign/home">居家</a></button></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!--  -->
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true">Card</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false">collapse</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Dropdown</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <!--Card   Start-->
+            <!-- Card -->
+            <h2>Card Image Overlay</h2>
+            <p>Turn an image into a card background and use .card-img-overlay to overlay the card's text:</p>
+
+            <div class="container-card mt-3" id="container-card">
+
+                <!-- card 1 -->
+                <div class="card img-fluid" style="width:500px">
+                    <img class="card-img-top" src="https://picsum.photos/id/18/800/600" alt="Card image"
+                        style="width:100%">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text" style="color: white;">Some example text some example text. Some example
+                            text some example text. Some
+                            example text some example text. Some example text some example text.</p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="card img-fluid" style="width:500px">
+                    <img class="card-img-top" src="https://picsum.photos/id/10/800/600" alt="Card image"
+                        style="width:100%">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text some example text. Some example text some example text.
+                            Some
+                            example text some example text. Some example text some example text.</p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="card img-fluid" style="width:500px">
+                    <img class="card-img-top" src="https://picsum.photos/id/14/800/600" alt="Card image"
+                        style="width:100%">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text some example text. Some example text some example text.
+                            Some
+                            example text some example text. Some example text some example text.</p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br><br>
+
+
+
+            <!-- Card End -->
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <!-- collapse -->
+
+            <div class="container-collapse" id="container-collapse">
+                <div class="container-fluid">
+                    <p class="d-inline-flex gap-1">
+                        <a class="btn btn-danger" data-bs-toggle="collapse" href="#multiCollapseExample1b" role="button"
+                            aria-expanded="false" aria-controls="multiCollapseExample1b">限時優惠</a>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample2b" aria-expanded="false"
+                            aria-controls="multiCollapseExample2b">出清特賣</button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target=".multi-collapseb" aria-expanded="false"
+                            aria-controls="multiCollapseExample1b multiCollapseExample2b">限時&出清</button>
+                    </p>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="collapse multi-collapseb" id="multiCollapseExample1b">
+                                <div class="card card-body">
+                                    <i class="fa-solid fa-scale-balanced"></i> 黑色星期五 一年一次 錯過只好等明年.......
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="collapse multi-collapseb" id="multiCollapseExample2b">
+                                <div class="card card-body">
+                                    <div class="">
+                                        <img src="https://picsum.photos/id/237/400/300" alt=""><br>
+                                        <i class="fa-solid fa-dog"></i> 只剩一隻 乖巧可愛
+                                        <span style=color:red;>帶走吧!!</span>
+                                    </div>
+                                    <!-- Some placeholder content for the second collapse component of this multi-collapse example. This panel is
+            hidden by default but revealed when the user activates the relevant trigger. -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+            <!-- Dropdown -->
+            <div class="container-dropdown" id="container-dropdown">
+                <div class="col-4   btn-group ">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btn-danger" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        特賣種類
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button"><a
+                                    href="https://tw.yahoo.com/">限時特賣</a></button></li>
+                        <li><button class="dropdown-item" type="button"><a href="https://shopee.tw/">出清特賣</a></button>
+                        </li>
+                        <li><button class="dropdown-item" type="button"><a
+                                    href="https://www.pchome.com.tw/">限時&出清</a></button>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-8 btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle " data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        一般商品
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button"><a
+                                    href="https://24h.pchome.com.tw/sign/3c">3C產品</a></button></li>
+                        <li><button class="dropdown-item" type="button"><a
+                                    href="https://24h.pchome.com.tw/sign/cp">週邊商品</a></button></li>
+                        <li><button class="dropdown-item" type="button"><a
+                                    href="https://24h.pchome.com.tw/sign/digi">數位</a></button></li>
+                        <li><button class="dropdown-item" type="button"><a
+                                    href="https://24h.pchome.com.tw/sign/daily">日用</a></button></li>
+                        <li><button class="dropdown-item" type="button"><a
+                                    href="https://24h.pchome.com.tw/sign/life">生活</a></button></li>
+                        <li><button class="dropdown-item" type="button"><a
+                                    href="https://24h.pchome.com.tw/sign/home">居家</a></button></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--  -->
+
+    <div class="my-p">
+        <a href="#">TOP</a>
+    </div>
+
+</body>
+
+</html>
