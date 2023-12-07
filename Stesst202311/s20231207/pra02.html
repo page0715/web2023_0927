@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文字方塊加總</title>
+</head>
+<body>
+
+  <label for="input1">輸入數字1：</label>
+  <input type="text" id="num1" /><br>
+
+  <label for="input2">輸入數字2：</label>
+  <input type="text" id="num2" /><br>
+
+  <button onclick="calcSum()" id="myBtn">計算加總</button>
+
+  <p id="result">結果：0</p>
+
+  <script>
+    let num1 = document.getElementById('num1')
+    let num2 = document.getElementById('num2')
+    let myBtn = document.getElementById('myBtn')
+    let result = document.getElementById('result')
+
+
+
+
+
+    function calcSum() {
+      // 獲取兩個輸入框的值
+      var input1 = document.getElementById('num1').value;
+      var input2 = document.getElementById('num2').value;
+
+      // 將字串轉換為數字並計算加總
+      // var sum = parseInt(num1) + parseInt(num2);
+      var sum = Number(input1) + Number(input2);
+
+      // 顯示結果
+      document.getElementById('result').innerText = '結果：' + sum;
+    }
+  </script>
+
+</body>
+</html>
