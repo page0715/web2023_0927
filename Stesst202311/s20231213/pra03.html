@@ -26,10 +26,10 @@
     }
 
     .my-container {
-      background-color: lightpink;
+      /* background-color: lightpink; */
       position: relative;
       height: 90vh;
-      /* overflow: hidden; */
+      overflow: hidden;
     }
 
     #myImg {
@@ -37,7 +37,6 @@
       right: -600px;
       /* right: 1400px; */
       bottom: 0px;
-      
     }
 
 
@@ -63,27 +62,30 @@
     @keyframes example {
       0% {
         /* background-color: red; */
-        right: -200px;
+        right: 1200px;
         bottom: 0px;
       }
 
       25% {
         /* background-color: red; */
-        bottom: 200px;
+        /* bottom: 200px; */
+        bottom: 0px;
         /* transform: rotate(90deg); */
       }
 
       75% {
         /* background-color: red; */
-        bottom: 300px;
+        /* bottom: 300px; */
+        bottom: 0px;
         /* transform: rotate(180deg); */
 
       }
 
       100% {
         /* background-color: lightblue; */
-        right: 1200px;
-        bottom: 100px;
+        right: -400px;
+        /* bottom: 100px; */
+        bottom: 0px;
         /* transform: rotate(270deg); */
       }
     }
@@ -93,21 +95,22 @@
 <body>
   <div class="container mt-5 my-container">
     <div class="mb-5">
-      <h1 class="text-center text-warning ">紅 綠 燈</h1>
+      <h1 class="text-center text-success">方 型 紅 綠 燈</h1>
     </div>
     <div class="row">
       <div class="col">
-        <div class="box rounded-pill">
-          <div id="light1" class="item bg-danger rounded-circle">
+        <!-- <div class="box rounded-pill"> -->
+        <div class="box">
+          <div id="light1" class="item bg-danger ">
           </div>
-          <div id="light2" class="item bg-danger rounded-circle">
+          <div id="light2" class="item bg-info ">
           </div>
-          <div id="light3" class="item bg-danger rounded-circle">
+          <div id="light3" class="item bg-primary ">
           </div>
         </div>
       </div>
       <div class="col">
-        <button type="button" id="myBtn" class="btn btn-primary btn-lg mt-5">行人過馬路按鈕</button>
+        <button type="button" id="myBtn" class="btn btn-primary btn-lg mt-5">請按按鈕!!</button>
 
       </div>
     </div>
@@ -115,7 +118,7 @@
       <div class="col">
         <a
           href="https://tw.news.yahoo.com/%E5%B8%9D%E7%8E%8B%E6%A2%9D%E6%AC%BE-%E5%A5%AA%E7%BE%8E%E8%A1%93%E8%B3%BD%E7%89%B9%E5%84%AA-%E5%9C%8B%E4%B8%AD%E7%94%9F%E8%AB%B7%E8%A1%8C%E4%BA%BA%E5%A6%82%E7%9A%87%E5%B8%9D%E8%A2%AB%E7%BD%B5%E7%88%86-080337120.html">
-          <img src="./images/baby.gif" alt="紅綠燈" title="全國學生美術比賽漫畫類特優" id="myImg">
+          <img src="./spongebobb.png" width="300px" height="300px"   alt="紅綠燈" title="跑者" id="myImg">
         </a>
       </div>
     </div>
@@ -156,15 +159,15 @@
 
       // time start
       setTimeout(function () {
-        light1.setAttribute('class', 'item bg-success rounded-circle');
+        light1.setAttribute('class', 'item bg-success ');
       }, 2500);
 
       setTimeout(function () {
-        light2.setAttribute('class', 'item bg-success rounded-circle');
+        light2.setAttribute('class', 'item bg-success ');
       }, 3000);
 
       setTimeout(function () {
-        light3.setAttribute('class', 'item bg-success rounded-circle');
+        light3.setAttribute('class', 'item bg-success ');
         myImg.setAttribute('class', 'd-block');
         myImg.setAttribute('class', 'myImgAnimation');
       }, 3500);
@@ -172,9 +175,9 @@
 
       // red
       setTimeout(function () {
-        light1.setAttribute('class', 'item bg-danger rounded-circle');
-        light2.setAttribute('class', 'item bg-danger rounded-circle');
-        light3.setAttribute('class', 'item bg-danger rounded-circle');
+        light1.setAttribute('class', 'item bg-danger');
+        light2.setAttribute('class', 'item bg-info');
+        light3.setAttribute('class', 'item bg-primary');
 
 
         initFun();
