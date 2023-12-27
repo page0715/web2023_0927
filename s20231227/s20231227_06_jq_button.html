@@ -13,6 +13,10 @@
 </head>
 
 <body>
+  <!-- <button type="button" id="myBtn">myBtn1</button> -->
+  <button type="button" class="myBtn">myBtn1</button>
+  <button type="button" class="myBtn">myBtn2</button>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -20,10 +24,28 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
-    $(document).ready(function(){
+    $(function () {
+
+      // const myBtn = $('#myBtn');
+      const myBtn = $('.myBtn');
+
+      myBtn.click(function (e) {
+        // console.log('myBtn click ok');
+        console.log('this', this);
+        console.log('$(this)', $(this));
+        // this.hide();
+        // $(this).hide();
+        $(this).text('clicked');
+
+        // innerText js property
+        // text('xxx') jquery method
+
+        // value js property
+        // val('xxx') jquery method
+
+      });
 
     });
-
   </script>
 </body>
 

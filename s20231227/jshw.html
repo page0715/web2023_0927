@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      text-align: center;
+    }
+
+    #totals {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    #totals p {
+      margin-bottom: 5px;
+    }
+
+    #totals span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>產品</th>
+          <th>單價</th>
+          <th>數量</th>
+          <th>總價</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><i class="fa-brands fa-apple"></i>蘋果</td>
+          <td><input type="number" name="item1Price" class="itemPrice form-control"></td>
+          <td><input type="number" name="item1Num" class="itemNum form-control"></td>
+          <td><input type="number" name="item1Total" class="itemTotal form-control" readonly></td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-lemon"></i>檸檬</td>
+          <td><input type="number" name="item2Price" class="itemPrice form-control"></td>
+          <td><input type="number" name="item2Num" class="itemNum form-control"></td>
+          <td><input type="number" name="item2Total" class="itemTotal form-control" readonly></td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-carrot"></i>胡蘿蔔</td>
+          <td><input type="number" name="item3Price" class="itemPrice form-control"></td>
+          <td><input type="number" name="item3Num" class="itemNum form-control"></td>
+          <td><input type="number" name="item3Total" class="itemTotal form-control" readonly></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="totals">
+      <p>總數量: <span id="totalQuantity">0</span></p>
+      <p>總價格<span style="color:red;">(若超過500則打八折):</span> <span id="totalPrice">0</span></p>
+    </div>
+  </div>
+
+  <script>
+
+    const itemPrices = document.querySelectorAll('.itemPrice');
+    const itemNums = document.querySelectorAll('.itemNum');
+    const itemTotals = document.querySelectorAll('.itemTotal');
+    const totalQuantityElement = document.getElementById('totalQuantity');
+    const totalPriceElement = document.getElementById('totalPrice');
+  
+    for (let i = 0; i < itemPrices.length; i++) {
+      itemPrices[i].addEventListener('input', updateTotal);
+      itemNums[i].addEventListener('input', updateTotal);
+    }
+  
+    // 最後加總,  
+    function updateTotal() {
+      let totalQuantity = 0;
+      let totalPrice = 0;
+  
+      for (let i = 0; i < itemPrices.length; i++) {
+        const price = parseInt(itemPrices[i].value) || 0; 
+        const num = parseInt(itemNums[i].value) || 0; 
+        const total = price * num;
+  
+        itemTotals[i].value = total.toFixed(0); 
+        totalQuantity += num;
+        totalPrice += total;
+      }
+  
+      totalQuantityElement.innerText = totalQuantity;
+      totalPriceElement.innerText = totalPrice.toFixed(0); 
+  
+      // 總價格超過 500 打八折
+      if (totalPrice > 500) {
+        totalPrice *= 0.8; 
+        totalPriceElement.innerText = totalPrice.toFixed(0); 
+      }
+    }
+  </script>
+</body>
+
+</html>
