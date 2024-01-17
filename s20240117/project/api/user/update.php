@@ -1,5 +1,2 @@
-<?php 
-$data = $_POST;
-
-// sql = "UPDATE table SET column WHERE condition id = 1 "....
-?>
+<?php
+echo ('user update ok');
