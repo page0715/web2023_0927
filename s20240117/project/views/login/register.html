@@ -23,30 +23,23 @@
         input[type="text"] {
             width: 200px;
         }
-
-        input[type="submit"] {
-            width: 100px;
-        }
-
-        button {
-            width: 100px;
-            font-size: 24px;
-        }
     </style>
 
 </head>
 <div class="container">
     <div class="box">
-        <form action="../../api/login/login.php" method="post" id="myForm">
+        <form action="../../api/login/login.html" method="post" id="myForm">
             <p>
-                <input type="text" name="acc" id="">
+                <input type="text" name="acc" id="" placeholder="name?">
             </p>
             <p>
-                <input type="text" name="pw" id="">
+                <input type="text" name="pwd1" id="" placeholder="password?">
             </p>
             <p>
-                <a href="../../views/login/register.html"><button type="button">註冊</button></a>
-                <input type="submit" value="登入">
+                <input type="text" name="pwd2" id="" placeholder="check password?">
+            </p>
+            <p>
+                <input type="submit" value="Register">
             </p>
 
         </form>
