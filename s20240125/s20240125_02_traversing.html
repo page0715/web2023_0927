@@ -19,6 +19,10 @@
     .container * {
       color: #ccc;
     }
+
+    ul {
+      list-style-type: none;
+    }
   </style>
 </head>
 
@@ -71,6 +75,8 @@
         console.log(this, 'this');
         // console.log($(this), '$(this)');
         let nowElement = $(this).parent();
+        let nowElementParent = $(this).parent().parent();
+
         console.log('nowElement', nowElement);
         // nowElement.addClass('text-danger');
         let getClassText = nowElement.attr('class');
@@ -78,6 +84,7 @@
         console.log('getClassText', getClassText);
         // nowElement.attr('class', 'mySpan border border-danger p-3 text-danger');
         nowElement.attr('class', getClassText);
+        nowElementParent.attr('class', 'border border-success p-3 text-warning')
         // $(this).addClass('text-primary');
 
 
