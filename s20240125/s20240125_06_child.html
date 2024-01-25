@@ -19,6 +19,10 @@
     .container * {
       color: #ccc;
     }
+
+    ul {
+      list-style-type: none;
+    }
   </style>
 </head>
 
@@ -63,20 +67,17 @@
 
   <script>
     $(document).ready(function () {
-      const mySpan = $('.mySpan');
-      const myB = $('#myB');
-
-      mySpan.click(function (e) {
-        console.log('mySpan ok');
-        console.log(this, 'this');
-        // console.log($(this), '$(this)');
-        let thisParentsUntil = $(this).parentsUntil('.container');
-        console.log('thisParentsUntil', thisParentsUntil);
-        thisParentsUntil.attr('class', 'border border-primary p-3 text-primary');
-
-
-
+      const box = $('.box');
+      box.click(function (e) {
+        console.log('this', this);
+        let thisChild = $(this).children();
+        let thisChildChild = $(this).children().children();
+        console.log('thisChild', thisChild);
+        console.log('thisChildChild', thisChildChild);
+        thisChild.attr('class', 'border border-success p-3 text-danger')
+        thisChildChild.attr('class', 'border border-warning p-3 text-primary')
       });
+
 
     });
 

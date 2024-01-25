@@ -19,6 +19,10 @@
     .container * {
       color: #ccc;
     }
+
+    ul {
+      list-style-type: none;
+    }
   </style>
 </head>
 
@@ -35,6 +39,12 @@
               li
               <span id="" class="mySpan border border-danger p-3">
                 hello span1 class
+              </span>
+            </li>
+            <li class="border border-warning p-3" data-name="li1">
+              li
+              <span id="" class="mySpan border border-danger p-3">
+                hello span2 class
               </span>
             </li>
             <li class="border border-warning p-3" data-name="li1">
@@ -63,20 +73,14 @@
 
   <script>
     $(document).ready(function () {
-      const mySpan = $('.mySpan');
-      const myB = $('#myB');
-
-      mySpan.click(function (e) {
-        console.log('mySpan ok');
-        console.log(this, 'this');
-        // console.log($(this), '$(this)');
-        let thisParentsUntil = $(this).parentsUntil('.container');
-        console.log('thisParentsUntil', thisParentsUntil);
-        thisParentsUntil.attr('class', 'border border-primary p-3 text-primary');
-
-
-
+      const box = $('.box');
+      box.click(function (e) {
+        console.log('this', this);
+        let thisFind = $(this).find('.mySpan');
+        console.log('thisFind', thisFind);
+        thisFind.attr('class', 'mySpan border border-danger p-3 text-danger')
       });
+
 
     });
 
