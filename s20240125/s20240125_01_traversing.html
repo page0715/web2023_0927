@@ -29,8 +29,14 @@
             ul
             <li class="border border-warning p-3" data-name="li1">
               li
-              <span id="mySpan" class="border border-danger p-3">
-                hello span
+              <span id="" class="mySpan border border-danger p-3">
+                hello span1 class
+              </span>
+            </li>
+            <li class="border border-warning p-3" data-name="li1">
+              li
+              <span id="" class="mySpan border border-danger p-3">
+                hello span2 class
               </span>
             </li>
             <li class="border border-warning p-3 mt-3" data-name="li2">
@@ -53,16 +59,22 @@
 
   <script>
     $(document).ready(function () {
-      const mySpan = $('#mySpan');
+      const mySpan = $('.mySpan');
       const myB = $('#myB');
 
       mySpan.click(function (e) {
         console.log('mySpan ok');
-        // console.log(this, 'this');
+        console.log(this, 'this');
         // console.log($(this), '$(this)');
         let nowElement = $(this).parent();
         console.log('nowElement', nowElement);
-        nowElement.attr('class', 'text-danger');
+        // nowElement.addClass('text-danger');
+        let getClassText = nowElement.attr('class');
+        getClassText = getClassText + ' text-danger';
+        console.log('getClassText', getClassText);
+        // nowElement.attr('class', 'mySpan border border-danger p-3 text-danger');
+        nowElement.attr('class', getClassText);
+
 
 
       });
