@@ -87,6 +87,12 @@
         myTableLastTr.clone().appendTo("tbody");
       });
 
+
+      /**
+       * 
+       * 複製最靠近的Tr
+       * 
+       */
       cloneBtn.click(function (e) {
         // console.log('this', this);
         let closestTr = $(this).closest('tr');
