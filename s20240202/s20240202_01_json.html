@@ -13,7 +13,33 @@
 </head>
 
 <body>
-
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col">
+        <button type="button" class="testBtn btn btn-primary">testBtn</button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <button type="button" class="testBtn btn btn-primary">testBtn</button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <button type="button" class="testBtn btn btn-primary">testBtn</button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <button type="button" class="testBtn btn btn-primary">testBtn</button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <button type="button" class="testBtn btn btn-primary">testBtn</button>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -21,6 +47,25 @@
 
   <script>
     $(document).ready(function () {
+      const testBtn = $('.testBtn');
+      console.log('testBtn', testBtn);
+      testBtn.each(function (index, element) {
+        // element == this
+        console.log('index', index);
+        console.log('element', element);
+        console.log('this', this);
+        $(this).click(function (e) {
+          e.preventDefault();
+
+        });
+
+      });
+      testBtn.click(function (e) { 
+        e.preventDefault();
+        console.log('this',this);
+        
+      });
+
       const obj = {
         's1': 'amy',
         's2': 'bob',
@@ -31,7 +76,9 @@
       const storeArr = [
         {
           'name': '台北店',
-          'mobile': '0911-111-111'
+          'mobile': '0911-111-111',
+          'chinese': '您好 YA',
+          'english': 'HELLO YA',
         },
         {
           'name': '台中店',
@@ -42,8 +89,12 @@
           'mobile': '0933-333-333'
         }
       ];
+
       console.log('storeArr', storeArr);
 
+      array.forEach(element => {
+
+      });
       storeArr.forEach(element => {
         console.log('element', element);
       });
