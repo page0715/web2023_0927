@@ -51,12 +51,13 @@
         success: function (res) {
           // . [] ->  property variable
           // .xxx()  ['xxx']()  ->xxx() method function action
-          // console.log('res', res);
+          console.log('res', res);
           // console.log('res.records', res.records);
           // console.log('res["records"]', res['records']);
           // console.log('res.records.datasetDescription', res.records.datasetDescription);
           // console.log('nowLocation', nowLocation);
           let nowLocation = res.records.location;
+
           $.each(nowLocation, function (key, value) {
             // console.log('key', key);
             // console.log('value', value);

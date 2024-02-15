@@ -1,31 +1,31 @@
 <?php
-date_default_timezone_set("Asia/Taipei");
+date_default_timezone_set("Aisa/Taipei");
 session_start();
 class DB{
-    protected $dsn="";
+    protected $dsn="mysql:host=localhost;charset=utf8;dbname=db15";
     protected $pdo;
     protected $table;
-    
+
     public function __construct($table){
         $this->table=$table;
         $this->pdo=new PDO($this->dsn,'root','');
     }
 
-
-
     function q($sql){
-        return $this->pdo->query($sql)->fetchall(PDO::FETCH_ASSOC);
+        return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
 
     private function a2s($array){
-        foreach ($array as $col => $value){
-            
+        foreach ($array as $col=>$value){
+            $tmp[] = "`$col`='$value'";
         }
+            return $tmp;
+    }
+
+    private function sql_all($sql,$array,$other){
+        
     }
 }
-
-
-
 
 function dd($array){
     echo "<pre>";
@@ -37,6 +37,6 @@ function to($url){
     header("location:$url");
 }
 
-$Total=new DB('total');
+$User=new DB('user');
 
 ?>
