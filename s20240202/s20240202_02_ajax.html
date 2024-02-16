@@ -41,7 +41,12 @@
     </div>
   </div>
 
-  <form action="./test0202.html"></form>
+  <form action="./test0202.html">
+    <input type="text" name="name" id="name">
+    <input type="text" name="mobile" id="mobile">
+    <input type="hidden" name="id">
+  </form>
+  <a href="./"></a>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -51,10 +56,10 @@
     $(document).ready(function () {
 
       let url = '';
-
+      data.id = 'self-id'
       $.ajax({
         type: "get",
-        url: "./test0202.html",
+        url: url,
         // data: "data",
         // dataType: "json",
         success: function (res) {

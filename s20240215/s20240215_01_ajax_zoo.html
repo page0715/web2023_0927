@@ -18,15 +18,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <!-- <a href="./s20240215_04_php_zoo.php"></a> -->
   <script>
     $(document).ready(function () {
-      let url = 'https://data.taipei/api/v1/dataset/5048d475-7642-43ee-ac6f-af0a368d63bf?scope=resourceAquire';
+      // let url = 'https://data.taipei/api/v1/dataset/5048d475-7642-43ee-ac6f-af0a368d63bf?scope=resourceAquire';
+      // let url = './s20240215_04_php_zoo.php';
+      let url = 'http://localhost/s20240215_04_php_zoo.php';
       $.ajax({
         type: "get",
         url: url,
         // data: "data",
-        // dataType: "dataType",
+        dataType: "json",
         success: function (res) {
           console.log('res', res);
         }

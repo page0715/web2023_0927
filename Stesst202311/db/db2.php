@@ -19,12 +19,24 @@ class DB{
         foreach ($array as $col=>$value){
             $tmp[] = "`$col`='$value'";
         }
-            return $tmp;
+        return $tmp;
     }
 
     private function sql_all($sql,$array,$other){
-        
+        if(isset($this->table) && !empty($this->table)){
+            if(is_array($array)){
+                if(!empty($array)){
+                    $tmp=$this->a2s($array);
+                    $sql .= " where " . join(" && ",$tmp);
+                }
+            }else{
+                $sql .= " $array";
+            }
+            $sql .= $other;
+            return $sql;
+        }
     }
+ 
 }
 
 function dd($array){
@@ -32,7 +44,6 @@ function dd($array){
     print_r($array);
     echo "</pre>";
 }
-
 function to($url){
     header("location:$url");
 }

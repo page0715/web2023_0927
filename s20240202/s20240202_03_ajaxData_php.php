@@ -37,6 +37,9 @@ $mobileArr = [
 
 ];
 
+$data['mobile'] = $input['tel'];
+$data['web'] = 'http:test.com';
+
 // $mobileArr = [
 //     's1' => 'amy',
 //     's2' => 'bob',
